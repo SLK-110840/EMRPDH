@@ -23,7 +23,7 @@ define("EMRPDH/scripts/Main", [
             
 			
             onLoad: function () {
-		alert*Welcome");		
+				
                 myWidget.getData();   
 
 
@@ -59,12 +59,9 @@ define("EMRPDH/scripts/Main", [
                 drop : function(data) {
 				    theDropElt.style.border = "none";
 					var obj = JSON.parse(data);					
-                    alert(data);
-                   var draggedObjType = obj["data"]["items"][0]["displayType"];
-			//var draggedObjType="Change Action";
-			 alert(draggedObjType);
+                    
+                    var draggedObjType = obj["data"]["items"][0]["displayType"];
 					var draggedObjName = obj["data"]["items"][0]["displayName"];
-			 alert(draggedObjName);
 					//var draggedObjId = obj["data"]["items"][0]["objectId"];
 				   if(draggedObjType==="Change Action"){
 					  var draggedObjId = "1220006CL2";
@@ -73,7 +70,6 @@ define("EMRPDH/scripts/Main", [
 				   alert("Inside data "+data);
 				   console.log("----------------data---------",data);
 /* 				   WAFData.authenticatedRequest(myWidget.csrfURL, {
-
 					method: "Get",
 					timeout: 150000,
 					type: "json",
