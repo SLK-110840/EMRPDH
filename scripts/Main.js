@@ -63,6 +63,7 @@ define("EMRPDH/scripts/Main", [
                     var draggedObjType = obj["data"]["items"][0]["displayType"];
 			 alert(draggedObjType);
 					var draggedObjName = obj["data"]["items"][0]["displayName"];
+			 alert(draggedObjName);
 					//var draggedObjId = obj["data"]["items"][0]["objectId"];
 				   if(draggedObjType==="Change Action"){
 					  var draggedObjId = "1220006CL2";
