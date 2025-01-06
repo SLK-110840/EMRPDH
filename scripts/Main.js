@@ -60,7 +60,7 @@ define("EMRPDH/scripts/Main", [
 				    theDropElt.style.border = "none";
 					var obj = JSON.parse(data);					
                     
-                    var draggedObjType = obj["data"]["items"][0]["displayType"];
+                    var draggedObjType = obj["data"]["items"][0]["objectType"];
 					var draggedObjName = obj["data"]["items"][0]["displayName"];
 					//var draggedObjId = obj["data"]["items"][0]["objectId"];
 				   if(draggedObjType==="Change Action"){
