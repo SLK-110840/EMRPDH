@@ -71,7 +71,7 @@ define("EMRPDH/scripts/Main", [
 				   alert("Inside DropId "+draggedObjId);
 				   alert("Inside data "+data);
 				   console.log("----------------data---------",data);
-/* 				   WAFData.authenticatedRequest(myWidget.csrfURL, {
+				   WAFData.authenticatedRequest(myWidget.csrfURL, {
 					method: "Get",
 					timeout: 150000,
 					type: "json",
@@ -111,7 +111,7 @@ define("EMRPDH/scripts/Main", [
 						});		
 alert("csrfTokenValue data "+csrfTokenValue);						
 						}
-            }); */
+            }); 
 					   
 					   //var iUrl = "https://emr-product-datahub-dev.azurewebsites.net/Dev/mcolist/";
 					   var fUrl = properties.caDetailurl+draggedObjId;
