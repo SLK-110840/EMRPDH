@@ -23,7 +23,7 @@ define("EMRPDH/scripts/Main", [
             
 			
             onLoad: function () {
-				
+		alert*Welcome");		
                 myWidget.getData();   
 
 
