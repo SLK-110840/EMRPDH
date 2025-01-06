@@ -5,11 +5,11 @@
 // });
 
 
-define("PDH/scripts/Main", [
+define("EMRPDH/scripts/Main", [
     "DS/PlatformAPI/PlatformAPI",
     "DS/WAFData/WAFData",
 	"DS/DataDragAndDrop/DataDragAndDrop",	
-    "css!PDH/Dependencies/bootstrap/css/bootstrap.css",
+    "css!EMRPDH/Dependencies/bootstrap/css/bootstrap.css",
 	"DS/WebappsUtils/WebappsUtils"],
     function (PlatformAPI, WAFData, DataDragAndDrop,dropIMG,util) {
 		
