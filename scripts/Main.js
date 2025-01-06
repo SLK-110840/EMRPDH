@@ -61,6 +61,7 @@ define("EMRPDH/scripts/Main", [
 					var obj = JSON.parse(data);					
                     
                     var draggedObjType = obj["data"]["items"][0]["displayType"];
+			 alert(draggedObjType);
 					var draggedObjName = obj["data"]["items"][0]["displayName"];
 					//var draggedObjId = obj["data"]["items"][0]["objectId"];
 				   if(draggedObjType==="Change Action"){
