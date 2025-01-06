@@ -73,6 +73,7 @@ define("EMRPDH/scripts/Main", [
 				   alert("Inside data "+data);
 				   console.log("----------------data---------",data);
 /* 				   WAFData.authenticatedRequest(myWidget.csrfURL, {
+alert("inside auth");
 					method: "Get",
 					timeout: 150000,
 					type: "json",
