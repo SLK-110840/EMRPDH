@@ -120,7 +120,7 @@ alert("csrfTokenValue data "+csrfTokenValue);
 					   
 					   //theDroppedElt.innerHTML = "<iframe src='"+JSON.stringify(finalres)+"' title='description' style='width: 100vw; height: 100vh;'></iframe>";
 					   
-					   widget.body.innerHTML = "<div class='droppableFrame'><img id='dropImage' alt='Drop Here' src='"+dropIconUrl+"'></div><div class='droppedFrame'></div><iframe src='"+fUrl+"' title='description' style='width: 100vw; height: 100vh;'></iframe>";
+					   widget.body.innerHTML = "<div class='droppableFrame'><img id='dropImage' alt='Drop Here' src='"+dropIconUrl+"'></div><div class='droppedFrame'></div><iframe src='"+appUrl+"' title='description' style='width: 100vw; height: 100vh;'></iframe>";
 				   }
 				   else {
 					   alert("This functionality is not available for selected type");
