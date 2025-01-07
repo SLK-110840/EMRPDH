@@ -88,7 +88,7 @@ define("EMRPDH/scripts/Main", [
 						alert("myHeaders myHeaders "+myWidget.ctx);
 						alert("myHeaders myHeaders "+myWidget.caUrl);
 						alert("myHeaders myHeaders "+draggedObjId);
-						var changeActionUrl = myWidget.caUrl + draggedObjId;
+						var changeActionUrl = myWidget.caUrl + draggedObjId+"?$fields=flowDown";
 						alert("changeActionUrl 11data "+changeActionUrl);
 						WAFData.authenticatedRequest(changeActionUrl, {
 						method: "Get",
