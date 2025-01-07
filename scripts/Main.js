@@ -92,7 +92,7 @@ define("EMRPDH/scripts/Main", [
 						alert("changeActionUrl 11data "+changeActionUrl);
 						WAFData.authenticatedRequest(changeActionUrl, {
 						method: "Get",
-						timeout: 150000,
+						timeout: 15000000,
 						headers: myHeaders,
 						type: "json",
 						onComplete: function (finalres, headerResponse) {
