@@ -101,6 +101,8 @@ define("EMRPDH/scripts/Main", [
 							//var fetchedData = finalres.data;
 							alert("Fetched Data: " + JSON.stringify(finalres));
 							if (finalres) {
+								 var flowdownObj = JSON.parse(finalres);	
+							alert("flowdownObj: " + flowdownObj);
             var fetchedData = JSON.stringify(finalres, null, 2); // Pretty-print JSON data
             alert("Fetched Data: " + fetchedData);
             theDroppedElt.innerHTML = "<iframe srcdoc='<pre>" + fetchedData + "</pre>' title='description' style='width: 100vw; height: 100vh;'></iframe>";
