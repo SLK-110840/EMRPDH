@@ -108,14 +108,14 @@ define("EMRPDH/scripts/Main", [
 							var finalresofflow=JSON.stringify(flowDownnew)
 							alert("flowdownObj123:" + flowdownObj["isFlowedDownIn"][0]);
 							alert("finalresofflow: " + finalresofflow);
-							if (finalresofflow) {
+							//if (finalresofflow) {
 								 
             //var fetchedData = JSON.stringify(finalres, null, 2); // Pretty-print JSON data
            // alert("Fetched Data: " + fetchedData);
-            theDroppedElt.innerHTML = "<iframe srcdoc='<pre>" + fetchedData + "</pre>' title='description' style='width: 100vw; height: 100vh;'></iframe>";
-        } else {
-            alert("No data found in the response.");
-        }
+         //   theDroppedElt.innerHTML = "<iframe srcdoc='<pre>" + fetchedData + "</pre>' title='description' style='width: 100vw; height: 100vh;'></iframe>";
+    //    } else {
+          //  alert("No data found in the response.");
+      //  }
 						}
 						});		
 alert("csrfTokenValue data "+csrfTokenValue);						
