@@ -112,7 +112,8 @@ define("EMRPDH/scripts/Main", [
 								 
             var fetchedData = JSON.stringify(finalres, null, 2); // Pretty-print JSON data
             alert("Fetched Data: " + fetchedData);
-          theDroppedElt.innerHTML = "<iframe srcdoc='<pre>" + fetchedData + "</pre>' title='description' style='width: 100vw; height: 100vh;'></iframe>";
+	var iUrl="https://emr-product-datahub-dev.azurewebsites.net/Dev/mcolist/"+draggedObjId;
+          theDroppedElt.innerHTML = "<iframe srcdoc='<pre>" + iUrl + "</pre>' title='description' style='width: 100vw; height: 100vh;'></iframe>";
      } else {
             alert("No data found in the response.");
         }
