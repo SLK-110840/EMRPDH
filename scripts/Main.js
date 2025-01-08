@@ -104,8 +104,10 @@ define("EMRPDH/scripts/Main", [
 							var flowDown=JSON.stringify(finalres);
 							alert("flowDown: " + flowDown);
 							var flowdownObj = JSON.parse(flowDown);	
+							var flowDownnew= flowdownObj["isFlowDownOf"];
+							var finalresofflow=JSON.stringify(flowDownnew)
 							alert("flowdownObj123:" + flowdownObj["isFlowDownOf"][0]);
-							alert("flowdownObj: " + flowdownObj);
+							alert("finalresofflow: " + finalresofflow);
 							if (finalres) {
 								 
             var fetchedData = JSON.stringify(finalres, null, 2); // Pretty-print JSON data
