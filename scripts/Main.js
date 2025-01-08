@@ -122,7 +122,7 @@ alert("csrfTokenValue data "+csrfTokenValue);
 						}
             }); 
 					 var iUrl="";
-						 if (finalresofflow) {
+						 if (finalresofflow!=null) {
 							 alert("hitting the url");
 					    iUrl = "https://emr-product-datahub-dev.azurewebsites.net/Dev/mcolist/";
 					   }
