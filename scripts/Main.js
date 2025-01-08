@@ -117,9 +117,11 @@ define("EMRPDH/scripts/Main", [
           //  alert("No data found in the response.");
       //  }
 						}
+							alert("csrfTokenValue data 1"+csrfTokenValue);
 						});		
 alert("csrfTokenValue data "+csrfTokenValue);						
 						}
+					   alert("csrfTokenValue data 2 "+csrfTokenValue);
             }); 
 					 var iUrl="";
 						 if (finalresofflow!=null) {
