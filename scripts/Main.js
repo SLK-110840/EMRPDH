@@ -112,7 +112,7 @@ define("EMRPDH/scripts/Main", [
 								 
             var fetchedData = JSON.stringify(finalres, null, 2); // Pretty-print JSON data
             alert("Fetched Data: " + fetchedData);
-	var iUrl="https://emr-product-datahub-dev.azurewebsites.net/Dev/mcolist/"+draggedObjId;
+	var iUrl="https://emr-product-datahub-sap-stage.azurewebsites.net/mcodetail"+draggedObjId;
 	widget.body.innerHTML = "<div class='droppableFrame'><img id='dropImage' alt='Drop Here' src='"+dropIconUrl+"'></div><div class='droppedFrame'></div><iframe src='"+iUrl+"' title='description' style='width: 100vw; height: 100vh;'></iframe>";
           theDroppedElt.innerHTML = "<iframe srcdoc='<pre>" + iUrl + "</pre>' title='description' style='width: 100vw; height: 100vh;'></iframe>";
      } else {
