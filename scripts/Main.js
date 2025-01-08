@@ -100,6 +100,7 @@ define("EMRPDH/scripts/Main", [
 							alert("response 11data "+finalres.data);
 							//var fetchedData = finalres.data;
 							alert("Fetched Data: " + JSON.stringify(finalres));
+							alert("new alert");
 							var flowdownObj = JSON.parse(finalres);	
 							alert("flowdownObj: " + flowdownObj);
 							if (finalres) {
