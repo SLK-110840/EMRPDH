@@ -106,7 +106,7 @@ define("EMRPDH/scripts/Main", [
 							var flowdownObj = JSON.parse(flowDown);	
 							var flowDownnew= flowdownObj["isFlowDownOf"];
 							var finalresofflow=JSON.stringify(flowDownnew)
-							alert("flowdownObj123:" + flowdownObj["isFlowDownOf"][0]);
+							alert("flowdownObj123:" + flowdownObj["isFlowedDownIn"][0]);
 							alert("finalresofflow: " + finalresofflow);
 							if (finalres) {
 								 
