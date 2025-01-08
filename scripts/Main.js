@@ -59,19 +59,17 @@ define("EMRPDH/scripts/Main", [
                 drop : function(data) {
 				    theDropElt.style.border = "none";
 					var obj = JSON.parse(data);					
-                    alert(obj);
-                    var draggedObjType = obj["data"]["items"][0]["objectType"];
-			alert(draggedObjType);
+                    
+                    var draggedObjType = obj["data"]["items"][0]["displayType"];
 					var draggedObjName = obj["data"]["items"][0]["displayName"];
 					var draggedObjId = obj["data"]["items"][0]["objectId"];
-			alert(draggedObjId);
 				   if(draggedObjType==="Change Action"){
-					 // var draggedObjId = "1220006CL2";
+					  var draggedObjId = "1220006CL2";
 					   alert("object type is Change Action............");
 				   alert("Inside DropId "+draggedObjId);
 				   alert("Inside data "+data);
 				   console.log("----------------data---------",data);
-				   WAFData.authenticatedRequest(myWidget.csrfURL, {
+ 				   WAFData.authenticatedRequest(myWidget.csrfURL, {
 					method: "Get",
 					timeout: 150000,
 					type: "json",
@@ -88,11 +86,11 @@ define("EMRPDH/scripts/Main", [
 						alert("myHeaders myHeaders "+myWidget.ctx);
 						alert("myHeaders myHeaders "+myWidget.caUrl);
 						alert("myHeaders myHeaders "+draggedObjId);
-						var changeActionUrl = myWidget.caUrl + draggedObjId+"?$fields=flowDown";
+						var changeActionUrl = myWidget.caUrl + draggedObjId;
 						alert("changeActionUrl 11data "+changeActionUrl);
 						WAFData.authenticatedRequest(changeActionUrl, {
 						method: "Get",
-						timeout: 15000000,
+						timeout: 150000,
 						headers: myHeaders,
 						type: "json",
 						onComplete: function (finalres, headerResponse) {
@@ -100,43 +98,28 @@ define("EMRPDH/scripts/Main", [
 							alert("response 11data "+finalres.data);
 							//var fetchedData = finalres.data;
 							alert("Fetched Data: " + JSON.stringify(finalres));
-							alert("new alert" +finalres.toString());
-							var flowDown=JSON.stringify(finalres);
-							alert("flowDown: " + flowDown);
-							var flowdownObj = JSON.parse(flowDown);	
-							var flowDownnew= flowdownObj["isFlowDownOf"];
-							var finalresofflow=JSON.stringify(flowDownnew)
-							alert("flowdownObj123:" + flowdownObj["isFlowedDownIn"][0]);
-							alert("finalresofflow: " + finalresofflow);
-							if (finalresofflow) {
-								 
+							if (finalres) {
+						  var flowdownObj = JSON.parse(finalres);	
+							alert("flowdownObj: " + flowdownObj);
             var fetchedData = JSON.stringify(finalres, null, 2); // Pretty-print JSON data
-           alert("Fetched Data: " + fetchedData);
-          theDroppedElt.innerHTML = "<iframe srcdoc='<pre>" + fetchedData + "</pre>' title='description' style='width: 100vw; height: 100vh;'></iframe>";
-       } else {
-  alert("No data found in the response.");
+            alert("Fetched Data: " + fetchedData);
+            theDroppedElt.innerHTML = "<iframe srcdoc='<pre>" + fetchedData + "</pre>' title='description' style='width: 100vw; height: 100vh;'></iframe>";
+        } else {
+            alert("No data found in the response.");
         }
 						}
-							alert("csrfTokenValue data 1"+csrfTokenValue);
 						});		
 alert("csrfTokenValue data "+csrfTokenValue);						
 						}
-					   alert("csrfTokenValue data 2 "+csrfTokenValue);
             }); 
-					 var iUrl="";
-						 if (finalresofflow) {
-							 alert("hitting the url");
-					    iUrl = "https://emr-product-datahub-dev.azurewebsites.net/Dev/mcolist/";
-					   }
-					   else
-					   {
-						     iUrl = "https://emr-product-datahub-dev.azurewebsites.net/Dev/mcolist/";
-					   }
-					   var fUrl =iUrl+draggedObjId;
+					   
+					   //var iUrl = "https://emr-product-datahub-dev.azurewebsites.net/Dev/mcolist/";
+					   var fUrl = properties.caDetailurl+draggedObjId;
 					   
 					   //theDroppedElt.innerHTML = "<iframe src='"+JSON.stringify(finalres)+"' title='description' style='width: 100vw; height: 100vh;'></iframe>";
 					   
-					   widget.body.innerHTML = "<div class='droppableFrame'><img id='dropImage' alt='Drop Here' src='"+dropIconUrl+"'></div><div class='droppedFrame'></div><iframe src='"+appUrl+"' title='description' style='width: 100vw; height: 100vh;'></iframe>";
+					   widget.body.innerHTML = "<div class='droppableFrame'><img id='dropImage' alt='Drop Here' src='"+dropIconUrl+"'></div><div class='droppedFrame'></div><iframe src='"+fUrl+"' title='description' style='width: 100vw; height: 100vh;'></iframe>";
+					   
 				   }
 				   else {
 					   alert("This functionality is not available for selected type");
