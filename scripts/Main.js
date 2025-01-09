@@ -108,18 +108,21 @@ define("EMRPDH/scripts/Main", [
 							var finalresofflow=JSON.stringify(flowDownnew)
 							alert("flowdownObj123:" + flowdownObj["isFlowedDownIn"][0]);
 							alert("finalresofflow: " + finalresofflow);
+							if(finalresofflow=="[]"){
+							finalresofflow="";	
+							}
 							if (finalresofflow) {
-								 
-            var fetchedData = JSON.stringify(finalres, null, 2); // Pretty-print JSON data
+								
+	var fetchedData = JSON.stringify(finalres, null, 2); // Pretty-print JSON data
             alert("Fetched Data: " + fetchedData);
 	var iUrl="https://emr-product-datahub-sap-stage.azurewebsites.net/mcodetail/"+draggedObjId;
 								alert("iUrl" +iUrl);
 	widget.body.innerHTML = "<div class='droppableFrame'><img id='dropImage' alt='Drop Here' src='"+dropIconUrl+"'></div><div class='droppedFrame'></div><iframe src='"+iUrl+"' title='description' style='width: 100vw; height: 100vh;'></iframe>";
           theDroppedElt.innerHTML = "<iframe srcdoc='<pre>" + iUrl + "</pre>' title='description' style='width: 100vw; height: 100vh;'></iframe>";
      } else {
-            var iUrl1="https://emr-product-datahub-sap-stage.azurewebsites.net/caDetails/"+draggedObjId;
+           var iUrl1="https://emr-product-datahub-sap-stage.azurewebsites.net/caDetails/"+draggedObjId;
 	widget.body.innerHTML = "<div class='droppableFrame'><img id='dropImage' alt='Drop Here' src='"+dropIconUrl+"'></div><div class='droppedFrame'></div><iframe src='"+iUrl+"' title='description' style='width: 100vw; height: 100vh;'></iframe>";
-          theDroppedElt.innerHTML = "<iframe srcdoc='<pre>" + iUrl1 + "</pre>' title='description' style='width: 100vw; height: 100vh;'></iframe>";
+          theDroppedElt.innerHTML = "<iframe srcdoc='<pre>" + iUrl1 + "</pre>' title='description' style='width: 100vw; height: 100vh;'></iframe>"; 
      } 
 						}
 						});		
