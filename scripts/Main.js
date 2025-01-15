@@ -32,20 +32,20 @@ define("EMRPDH/scripts/Main", [
             },
 			
 			onRefresh: function() {
-                        alert("Inside refresh");
+                      
 						myWidget.getData(); 
                     },
             
             getData: function () {
 				var appUrl = properties.applicationurl;
-				alert("From prop file appUrl - "+appUrl);
+				
 				
 				var iconUrl = widget.getUrl();
                 iconUrl = iconUrl.substring(0, iconUrl.lastIndexOf("/"));
                 var  dropIconUrl = iconUrl + "/assets/icons/I_DropZone.png";
                 //let templateUrl = iconUrl+"/assets/BOM_Imports.xlsx";
 				
-				alert("heyyyyyyyyyyyyyyyyyy"+dropIconUrl);
+			
 				
                 widget.body.innerHTML = "<div class='droppableFrame'><img id='dropImage' alt='Drop Here' src='"+dropIconUrl+"'></div><div class='droppedFrame'></div><iframe src='"+appUrl+"' title='description' style='width: 100vw; height: 100vh;'></iframe>";
 				
@@ -61,15 +61,14 @@ define("EMRPDH/scripts/Main", [
 					var obj = JSON.parse(data);					
                     alert(obj);
                     var draggedObjType = obj["data"]["items"][0]["objectType"];
-			alert(draggedObjType);
+			
 					var draggedObjName = obj["data"]["items"][0]["displayName"];
 					var draggedObjId = obj["data"]["items"][0]["objectId"];
-			alert(draggedObjId);
+			
 				   if(draggedObjType==="Change Action"){
 					 // var draggedObjId = "1220006CL2";
-					   alert("object type is Change Action............");
-				   alert("Inside DropId "+draggedObjId);
-				   alert("Inside data "+data);
+					   
+				
 				   console.log("----------------data---------",data);
 				   WAFData.authenticatedRequest(myWidget.csrfURL, {
 					method: "Get",
@@ -78,62 +77,57 @@ define("EMRPDH/scripts/Main", [
 					onComplete: function (res, headerRes) {
 						const csrfTokenName = res.csrf.name;
 						const csrfTokenValue = res.csrf.value;
-						alert("csrfTokenValue 11data "+csrfTokenName);
+						
 						const securityContextHeader = "SecurityContext";
 						const myHeaders = new Object();
 						myHeaders[csrfTokenName] = csrfTokenValue;
 						myHeaders[securityContextHeader] = myWidget.ctx;
 						myHeaders["Content-Type"] = "application/json";
 						console.log(myWidget.ctx);
-						alert("myHeaders myHeaders "+myWidget.ctx);
-						alert("myHeaders myHeaders "+myWidget.caUrl);
-						alert("myHeaders myHeaders "+draggedObjId);
+					
 						var changeActionUrl = myWidget.caUrl + draggedObjId+"?$fields=flowDown";
-						alert("changeActionUrl 11data "+changeActionUrl);
+					
 						WAFData.authenticatedRequest(changeActionUrl, {
 						method: "Get",
 						timeout: 15000000,
 						headers: myHeaders,
 						type: "json",
 						onComplete: function (finalres, headerResponse) {
-							alert("csrfTokenValue data "+csrfTokenValue);
-							alert("response 11data "+finalres.data);
+						
 							//var fetchedData = finalres.data;
-							alert("Fetched Data: " + JSON.stringify(finalres));
-							alert("new alert" +finalres.toString());
+							
+							
 							var flowDown=JSON.stringify(finalres);
-							alert("flowDown: " + flowDown);
+						
 							var flowdownObj = JSON.parse(flowDown);	
 							var flowDownnew= flowdownObj["isFlowDownOf"];
 							var finalresofflow=JSON.stringify(flowDownnew)
-							alert("flowdownObj123:" + flowdownObj["isFlowedDownIn"][0]);
-							alert("finalresofflow: " + finalresofflow);
+							
 							if(finalresofflow=="[]"){
 							finalresofflow="";	
 							}
 							if (finalresofflow) {
 								
 	var fetchedData = JSON.stringify(finalres, null, 2); // Pretty-print JSON data
-            alert("Fetched Data: " + fetchedData);
+          
 	var iUrl="https://emr-product-datahub-sap-stage.azurewebsites.net/mcodetail/"+draggedObjId;
-								alert("iUrl" +iUrl);
+								
 	widget.body.innerHTML = "<div class='droppableFrame'><img id='dropImage' alt='Drop Here' src='"+dropIconUrl+"'></div><div class='droppedFrame'></div><iframe src='"+iUrl+"' title='description' style='width: 100vw; height: 100vh;'></iframe>";
           theDroppedElt.innerHTML = "<iframe srcdoc='<pre>" + iUrl + "</pre>' title='description' style='width: 100vw; height: 100vh;'></iframe>";
      } else {
-								alert("in else");
+								
            var iUrl1="https://emr-product-datahub-sap-stage.azurewebsites.net/caDetails/"+draggedObjId;
-								alert(iUrl1);
+								
 	widget.body.innerHTML = "<div class='droppableFrame'><img id='dropImage' alt='Drop Here' src='"+dropIconUrl+"'></div><div class='droppedFrame'></div><iframe src='"+iUrl1+"' title='description' style='width: 100vw; height: 100vh;'></iframe>";
           theDroppedElt.innerHTML = "<iframe srcdoc='<pre>" + iUrl1 + "</pre>' title='description' style='width: 100vw; height: 100vh;'></iframe>"; 
      } 
 						}
 						});		
-alert("csrfTokenValue data "+csrfTokenValue);						
+					
 						}
             }); 
 					 var iUrl="";
 						 if (finalresofflow) {
-							 alert("hitting the url");
 					    iUrl = "https://emr-product-datahub-dev.azurewebsites.net/Dev/mcolist/";
 					   }
 					   else
