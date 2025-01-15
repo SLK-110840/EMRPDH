@@ -59,7 +59,7 @@ define("EMRPDH/scripts/Main", [
                 drop : function(data) {
 				    theDropElt.style.border = "none";
 					var obj = JSON.parse(data);					
-                    alert(obj);
+                    
                     var draggedObjType = obj["data"]["items"][0]["objectType"];
 			
 					var draggedObjName = obj["data"]["items"][0]["displayName"];
