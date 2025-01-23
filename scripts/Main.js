@@ -42,6 +42,7 @@ define("EMRPDH/scripts/Main", [
                     alert("Please drop only one object");
                     return;
                 } else {
+			alert("coming here");
                     myWidget.getData();
                 }
             },
