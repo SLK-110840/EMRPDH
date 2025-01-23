@@ -24,7 +24,7 @@ define("EMRPDH/scripts/Main", [
 			
             onLoad: function () {
 				
-                myWidget.updateWidget();   
+              dragAndDropComp.showDroppable();  
 
 
                 widget.setTitle("");
@@ -33,7 +33,7 @@ define("EMRPDH/scripts/Main", [
 			
 			onRefresh: function() {
                       
-						myWidget.updateWidget(); 
+						dragAndDropComp.showDroppable();
                     },
              updateWidget: function () {
                 dragAndDropComp.showDroppable();
