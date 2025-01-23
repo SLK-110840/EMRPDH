@@ -11,7 +11,7 @@ define("EMRPDH/scripts/Main", [
 	"DS/DataDragAndDrop/DataDragAndDrop",	
     "css!EMRPDH/Dependencies/bootstrap/css/bootstrap.css",
 	"DS/WebappsUtils/WebappsUtils"],
-    function (PlatformAPI, WAFData, DataDragAndDrop,dropIMG,util) {
+    function (PlatformAPI, WAFData, dragAndDropComp,dropIMG,util) {
 		
 
         var myWidget = {
