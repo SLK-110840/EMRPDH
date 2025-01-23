@@ -55,7 +55,7 @@ define("EMRPDH/scripts/Main", [
 				
 				DataDragAndDrop.droppable( theDropElt , {  
                 drop : function(data) {
-			droppableContainer.classList.remove("drag-over");
+			
 			alert("before1");
 			 widget.body.innerHTML = "<div class='droppableFrame'><src='"+appUrl+"'></div><div class='droppedFrame'></div><iframe src='' title='description' style='width: 100vw; height: 100vh;'></iframe>";
 			alert("after1");	  
