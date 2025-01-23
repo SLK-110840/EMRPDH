@@ -11,7 +11,7 @@ define("EMRPDH/scripts/Main", [
 	"DS/DataDragAndDrop/DataDragAndDrop",	
     "css!EMRPDH/Dependencies/bootstrap/css/bootstrap.css",
 	"DS/WebappsUtils/WebappsUtils"],
-    function (PlatformAPI, WAFData, dragAndDropComp,dropIMG,util) {
+    function (PlatformAPI, WAFData, DataDragAndDrop,dropIMG,util) {
 		
 
         var myWidget = {
@@ -27,26 +27,15 @@ define("EMRPDH/scripts/Main", [
               
 
 
-                 myWidget.updateWidget();  
+                 myWidget.getData();  
 
             },
 			
 			onRefresh: function() {
                       
-				  myWidget.updateWidget();  		
+				  myWidget.getData();  		
                     },
-             updateWidget: function () {
-		    
-                dragAndDropComp.showDroppable();
-            }, getDroppedObjectInfo: function (data) {
-                if (data.length > 1) {
-                    alert("Please drop only one object");
-                    return;
-                } else {
-			alert("coming here");
-                    myWidget.getData();
-                }
-            },
+             
             getData: function () {
 				var appUrl = properties.applicationurl;
 				
