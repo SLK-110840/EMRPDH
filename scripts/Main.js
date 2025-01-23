@@ -24,7 +24,7 @@ define("EMRPDH/scripts/Main", [
 			
             onLoad: function () {
 				
-                myWidget.getData();   
+                myWidget.updateWidget();   
 
 
                 widget.setTitle("");
@@ -33,9 +33,18 @@ define("EMRPDH/scripts/Main", [
 			
 			onRefresh: function() {
                       
-						myWidget.getData(); 
+						myWidget.updateWidget(); 
                     },
-            
+             updateWidget: function () {
+                dragAndDropComp.showDroppable();
+            }, getDroppedObjectInfo: function (data) {
+                if (data.length > 1) {
+                    alert("Please drop only one object");
+                    return;
+                } else {
+                    myWidget.getData();
+                }
+            },
             getData: function () {
 				var appUrl = properties.applicationurl;
 				
