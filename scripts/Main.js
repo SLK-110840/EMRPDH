@@ -55,7 +55,7 @@ define("EMRPDH/scripts/Main", [
 				
 				DataDragAndDrop.droppable( theDropElt , {  
                 drop : function(data) {
-			widget.body.innerHTML = "<div class='droppableFrame'><img id='dropImage' alt='Drop Here' src=''></div><div class='droppedFrame'></div><iframe src='"+appUrl+"' title='description' style='width: 100vw; height: 100vh;'></iframe>";
+			 widget.body.innerHTML = "<div class='droppableFrame'><img id='dropImage' alt='Drop Here' src='"+appUrl+"'></div><div class='droppedFrame'></div><iframe src='' title='description' style='width: 100vw; height: 100vh;'></iframe>";
 				    theDropElt.style.border = "none";
 					var obj = JSON.parse(data);					
                     
