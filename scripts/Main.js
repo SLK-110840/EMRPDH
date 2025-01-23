@@ -46,20 +46,7 @@ define("EMRPDH/scripts/Main", [
 				
 			
 				
-             var temp =
-                     `<div class="droppableContainer" style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; color: blue;">
-             <img 
-                 src="https://thewhitechamaleon.github.io/RevisionFloat/EmersonTest/assets/images/drag-and-drop.png" 
-                 alt="Drag and Drop" 
-               style="width: 60px; height: 60px;" 
-             />
-             <span style="font-size: 20px; color: black;">Drag and Drop</span>
-            <div style="display: flex; align-items: center; margin-top: 20px; width: 30%;">
-                <hr style="flex: 1;" />
-                 <span style="margin: 0 10px; color: black;">or</span>
-                 <hr style="flex: 1;" />
-             </div>;
-	      widget.body.innerHTML = temp;
+                             widget.body.innerHTML = "<div class='droppableFrame'><img id='dropImage' alt='Drop Here' src='"+dropIconUrl+"'></div><div class='droppedFrame'></div>;
 				
 				var theDropElt = widget.body.querySelector('.droppableFrame');		
 				var theDroppedElt = widget.body.querySelector('.droppedFrame');
