@@ -53,7 +53,7 @@ define("EMRPDH/scripts/Main", [
 				
 				var droppableContainer = widget.body.querySelector('.droppableContainer');
 				
-				DataDragAndDrop.droppable( droppableContainer , {  
+				DataDragAndDrop.droppable( theDropElt , {  
                 drop : function(data) {
 			//droppableContainer.classList.remove("drag-over");
 			alert("before1");
