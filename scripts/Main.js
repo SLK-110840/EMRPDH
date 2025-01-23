@@ -24,16 +24,16 @@ define("EMRPDH/scripts/Main", [
 			
             onLoad: function () {
 		alert("here");		
-              dragAndDropComp.showDroppable();  
+              
 
 
-                widget.setTitle("");
+                 myWidget.updateWidget();  
 
             },
 			
 			onRefresh: function() {
                       
-						dragAndDropComp.showDroppable();
+				  myWidget.updateWidget();  		
                     },
              updateWidget: function () {
                 dragAndDropComp.showDroppable();
