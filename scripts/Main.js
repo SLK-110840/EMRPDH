@@ -14,7 +14,7 @@ define("EMRPDH/scripts/Main", [
     function (PlatformAPI, WAFData, DataDragAndDrop,dropIMG,util) {
 		
 
-        var myWidget = {
+         var myWidget = {
 			ctx: "VPLMProjectLeader.0000000001.Micro Motion",
         caUrl:
             "https://oi000186152-us1-space.3dexperience.3ds.com/enovia/resources/v1/modeler/dslc/changeaction/",
@@ -23,19 +23,18 @@ define("EMRPDH/scripts/Main", [
             
 			
             onLoad: function () {
-		alert("here");		
-              
+				
+                myWidget.getData();   
 
 
-                 myWidget.getData();  
+                widget.setTitle("");
 
             },
 			
 			onRefresh: function() {
-                      
-				  myWidget.getData();  		
+                        alert("Inside refresh");
+						myWidget.getData(); 
                     },
-             
             getData: function () {
 				var appUrl = properties.applicationurl;
 				
