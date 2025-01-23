@@ -23,7 +23,7 @@ define("EMRPDH/scripts/Main", [
             
 			
             onLoad: function () {
-				
+		alert("here");		
               dragAndDropComp.showDroppable();  
 
 
