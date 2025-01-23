@@ -46,7 +46,7 @@ define("EMRPDH/scripts/Main", [
 				
 			alert("before");
 				
-                               widget.body.innerHTML = "<div class='droppableFrame'><img id='dropImage' alt='Drop Here' src='"+dropIconUrl+"'></div><div class='droppedFrame'></div><iframe src='"+appUrl+"' title='description' style='width: 100vw; height: 100vh;'></iframe>";
+                               widget.body.innerHTML = "<div class='droppableFrame'><img id='dropImage' alt='Drop Here' src='"+dropIconUrl+"'></div><div class='droppedFrame'></div><iframe src='' title='description' style='width: 100vw; height: 100vh;'></iframe>";
 				alert("after");
 				var theDropElt = widget.body.querySelector('.droppableFrame');		
 				var theDroppedElt = widget.body.querySelector('.droppedFrame');
