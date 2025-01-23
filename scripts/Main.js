@@ -36,6 +36,7 @@ define("EMRPDH/scripts/Main", [
 				  myWidget.updateWidget();  		
                     },
              updateWidget: function () {
+		     alert("here2345");
                 dragAndDropComp.showDroppable();
             }, getDroppedObjectInfo: function (data) {
                 if (data.length > 1) {
