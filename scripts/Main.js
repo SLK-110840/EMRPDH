@@ -51,7 +51,7 @@ define("EMRPDH/scripts/Main", [
 				var theDropElt = widget.body.querySelector('.droppableFrame');		
 				var theDroppedElt = widget.body.querySelector('.droppedFrame');
 				
-				
+				var droppableContainer = widget.body.querySelector('.droppableContainer');
 				
 				DataDragAndDrop.droppable( theDropElt , {  
                 drop : function(data) {
@@ -150,7 +150,8 @@ define("EMRPDH/scripts/Main", [
 				   
                 },
 				enter: function() {	
-                   theDropElt.style.border = "thick dotted #78befa";
+                    console.log("Enter");
+        //                 droppableContainer.classList.add("drag-over");
 				   
                 },
                 over: function() {	
@@ -158,7 +159,8 @@ define("EMRPDH/scripts/Main", [
 					
                 }, 
                 leave: function() {
-                   theDropElt.style.border = "none";
+                     console.log("leave");
+        //                 droppableContainer.classList.remove("drag-over");
                 }
             }) ;
             }
