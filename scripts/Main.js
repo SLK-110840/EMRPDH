@@ -44,10 +44,10 @@ define("EMRPDH/scripts/Main", [
                 var  dropIconUrl = iconUrl + "/assets/icons/I_DropZone.png";
                 //let templateUrl = iconUrl+"/assets/BOM_Imports.xlsx";
 				
-			
+			alert("before");
 				
                              widget.body.innerHTML = "<div class='droppableFrame'><img id='dropImage' alt='Drop Here' src='"+dropIconUrl+"'></div><div class='droppedFrame'></div>;
-				
+				alert("after");
 				var theDropElt = widget.body.querySelector('.droppableFrame');		
 				var theDroppedElt = widget.body.querySelector('.droppedFrame');
 				
