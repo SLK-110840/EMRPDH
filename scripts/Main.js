@@ -57,9 +57,7 @@ define("EMRPDH/scripts/Main", [
                 drop : function(data) {
 			//droppableContainer.classList.remove("drag-over");
 			alert("before1");
-			 widget.body.innerHTML = "<div class='droppableFrame'><src='"+appUrl+"'></div><div class='droppedFrame'></div><iframe src='' title='description' style='width: 100vw; height: 100vh;'></iframe>";
-			alert("after1");	  
-			theDropElt.style.border = "none";
+			widget.body.innerHTML = "<div class='droppableFrame'></div><div class='droppedFrame'></div><iframe src='"+appUrl+"' title='description' style='width: 100vw; height: 100vh;'></iframe>";
 					var obj = JSON.parse(data);					
                     
                     var draggedObjType = obj["data"]["items"][0]["objectType"];
