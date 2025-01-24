@@ -41,7 +41,7 @@ define("EMRPDH/scripts/Main", [
 				
 				var iconUrl = widget.getUrl();
                 iconUrl = iconUrl.substring(0, iconUrl.lastIndexOf("/"));
-                var  dropIconUrl = iconUrl + "/assets/icons/I_DropZone.png";
+                var  dropIconUrl = "https://thewhitechamaleon.github.io/testrapp/images/drag.png";
                 //let templateUrl = iconUrl+"/assets/BOM_Imports.xlsx";
 				
 			
