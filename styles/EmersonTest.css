@@ -1,7 +1,7 @@
 .droppableFrame {
     position: absolute;
-    width: 90px!;
-    height: 90px!;
+    width: 90px!important;
+    height: 90px!important;
     background: #fff;
     opacity: 0.5;
     display: flex;
