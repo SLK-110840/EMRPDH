@@ -106,7 +106,9 @@ define("EMRPDH/scripts/Main", [
               finalresofflow="";  
               }
               if (finalresofflow) {
-                  var iUrl="https://plmpdh-qa.emerson.com/mcodetail/"+draggedObjId;
+              const targetId = finalresofflow[0].identifier;
+ 
+                  var iUrl="https://emr-product-datahub-qa.azurewebsites.net/caDetails/"+targetId;
                
   widget.body.innerHTML = "<div class='droppedFrame'></div><iframe src='"+iUrl+"' title='description' style='width: 100vw; height: 100vh;'></iframe>";
           theDroppedElt.innerHTML = "<iframe srcdoc='<pre>" + iUrl + "</pre>' title='description' style='width: 100vw; height: 100vh;'></iframe>";
