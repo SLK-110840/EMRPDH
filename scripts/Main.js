@@ -101,13 +101,13 @@ define("EMRPDH/scripts/Main", [
               var flowdownObj = JSON.parse(flowDown);
               var flowDownnew= flowdownObj["isFlowDownOf"];
               var finalresofflow=JSON.stringify(flowDownnew)
-var  targetId = flowDownnew[0].identifier;
-             alert(targetId);
+
               if(finalresofflow=="[]"){
               finalresofflow="";  
               }
               if (finalresofflow) {
-              
+              var  targetId = flowDownnew[0].identifier;
+             alert(targetId);
  
                   var iUrl="https://emr-product-datahub-qa.azurewebsites.net/caDetails/"+targetId;
                
