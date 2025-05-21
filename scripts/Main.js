@@ -106,19 +106,22 @@ define("EMRPDH/scripts/Main", [
               finalresofflow="";  
               }
               if (finalresofflow) {
-               
-     var iUrl1="https://plmpdh-qa.emerson.com/caDetails/"+draggedObjId;
-             
-  widget.body.innerHTML = "<div class='droppedFrame'></div><iframe src='"+iUrl1+"' title='description' style='width: 100vw; height: 100vh;'></iframe>";
-          theDroppedElt.innerHTML = "<iframe srcdoc='<pre>" + iUrl1 + "</pre>' title='description' style='width: 100vw; height: 100vh;'></iframe>";
-     } else {
- 
-var fetchedData = JSON.stringify(finalres, null, 2); // Pretty-print JSON data
-         
-  var iUrl="https://plmpdh-qa.emerson.com/mcodetail/"+draggedObjId;
+                  var iUrl="https://plmpdh-qa.emerson.com/mcodetail/"+draggedObjId;
                
   widget.body.innerHTML = "<div class='droppedFrame'></div><iframe src='"+iUrl+"' title='description' style='width: 100vw; height: 100vh;'></iframe>";
           theDroppedElt.innerHTML = "<iframe srcdoc='<pre>" + iUrl + "</pre>' title='description' style='width: 100vw; height: 100vh;'></iframe>";
+   
+     } else {
+ 
+var fetchedData = JSON.stringify(finalres, null, 2); // Pretty-print JSON data
+ 
+ 
+ var iUrl1="https://plmpdh-qa.emerson.com/caDetails/"+draggedObjId;
+             
+  widget.body.innerHTML = "<div class='droppedFrame'></div><iframe src='"+iUrl1+"' title='description' style='width: 100vw; height: 100vh;'></iframe>";
+          theDroppedElt.innerHTML = "<iframe srcdoc='<pre>" + iUrl1 + "</pre>' title='description' style='width: 100vw; height: 100vh;'></iframe>";
+         
+ 
  
                
        
