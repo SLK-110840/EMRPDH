@@ -101,7 +101,7 @@ define("EMRPDH/scripts/Main", [
               var flowdownObj = JSON.parse(flowDown);
               var flowDownnew= flowdownObj["isFlowDownOf"];
               var finalresofflow=JSON.stringify(flowDownnew)
-             var targetId = finalresofflow[0].identifier;
+const  targetId = flowDownnew[0].identifier;
              alert(targetId);
               if(finalresofflow=="[]"){
               finalresofflow="";  
