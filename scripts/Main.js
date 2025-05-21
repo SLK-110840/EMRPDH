@@ -107,7 +107,7 @@ define("EMRPDH/scripts/Main", [
               }
               if (finalresofflow) {
               var  targetId = flowDownnew[0].identifier;
-             alert(targetId);
+             
  
                   var iUrl="https://emr-product-datahub-qa.azurewebsites.net/caDetails/"+targetId;
                
