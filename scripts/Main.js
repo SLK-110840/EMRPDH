@@ -15,7 +15,7 @@ define("EMRPDH/scripts/Main", [
    
  
          var myWidget = {
-      ctx: "VPLMProjectLeader.0000000001.Micro Motion",
+      ctx: "VPLMAdmin.Company Name.Default",
         caUrl:
             "https://oi000186152-us1-space.3dexperience.3ds.com/enovia/resources/v1/modeler/dslc/changeaction/",
         csrfURL:
